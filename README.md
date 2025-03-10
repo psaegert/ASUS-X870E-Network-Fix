@@ -1,10 +1,10 @@
-# Possible ASUS X870E Network Fix
+# ASUS X870E Network Fix
 
 ## TL;DR
 Permanently set the ASPM policy to `performance`
 
 ## Uptime
-10 days and counting
+20 days and counting
 
 ## Problem
 Ubuntu server (Ubuntu 24.04.2 LTS) would reliably lose network connection after a seemingly random number of days of uptime.
