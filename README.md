@@ -4,7 +4,7 @@
 Permanently set the ASPM policy to `performance`
 
 ## Uptime
-20 days and counting
+Stable (>30 days)
 
 ## Problem
 Ubuntu server (Ubuntu 24.04.2 LTS) would reliably lose network connection after a seemingly random number of days of uptime.
