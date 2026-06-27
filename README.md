@@ -3,9 +3,6 @@
 ## TL;DR
 Permanently set the ASPM policy to `performance`
 
-## Uptime
-Stable (>30 days)
-
 ## Problem
 Ubuntu server (Ubuntu 24.04.2 LTS) would reliably lose network connection after a seemingly random number of days of uptime.
 
@@ -26,9 +23,9 @@ EEE settings for eno1:
 ```sh
 sudo nano /etc/default/grub
 ```
-2. Add ` pcie_aspm.policy=performance`  to the  `GRUB_CMDLINE_LINUX_DEFAULT` value:
+2. Add ` pcie_aspm=off`  to the  `GRUB_CMDLINE_LINUX_DEFAULT` value:
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="... pcie_aspm.policy=performance"
+GRUB_CMDLINE_LINUX_DEFAULT="... pcie_aspm=off"
 ```
 3. Save the file
 4. Update GRUB
@@ -39,6 +36,9 @@ sudo update-grub
 ```sh
 sudo reboot
 ```
+
+## Note
+Setting pcie_aspm.policy=performance helped for a while but resulted in the same issue a year later.
 
 ## Sources
 - https://kagi.com/assistant/c59f19c7-7ff8-498b-bf95-a0f0621d64a0
