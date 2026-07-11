@@ -1,0 +1,9 @@
+[Unit]
+Description=Disable PCIe ASPM on I226 NIC link (igc PCIe-loss workaround)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/disable-nic-aspm.sh
+
+[Install]
+WantedBy=multi-user.target

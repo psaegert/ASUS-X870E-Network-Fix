@@ -1,0 +1,9 @@
+[Unit]
+Description=Re-assert NIC ASPM disable periodically
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target

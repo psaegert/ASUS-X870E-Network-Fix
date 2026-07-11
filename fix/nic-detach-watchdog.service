@@ -1,0 +1,9 @@
+[Unit]
+Description=Power-cycle when igc NIC falls off the PCIe bus
+
+[Service]
+ExecStart=/usr/local/sbin/nic-detach-watchdog.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
